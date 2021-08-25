@@ -1,0 +1,67 @@
+import React, { useState, useEffect } from "react"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import Product from './components/Product';
+import F0 from './components/F0';
+import Menu from './components/Menu';
+import Doctor from './components/Doctor';
+import Exam from "./components/Exam";
+
+
+function App() {
+
+  useEffect(() => {
+    document.title = "Home-base Care Program"
+ }, []);
+
+  return (
+    <div class="container">
+      <Router>
+        <div>      
+          <Menu/>
+          
+          {/*
+          A <Switch> looks through all its children <Route>
+          elements and renders the first one whose path
+          matches the current URL. Use a <Switch> any time
+          you have multiple routes, but you want only one
+          of them to render at a time
+        */}
+          <Switch>
+            <Route exact path="/">
+             
+            </Route>
+            <Route path="/about">   
+            </Route>
+
+            <Route path="/f0">
+              <F0 />
+            </Route>
+
+            <Route path="/product">
+              <Product />
+            </Route>
+
+
+            <Route path="/doctor">
+              <Doctor />
+            </Route>
+
+            <Route path="/exam/:f0">
+              <Exam/>
+            </Route>  
+
+          </Switch>
+        </div>
+      </Router>
+    </div>
+  );
+}
+
+export default App;
+
