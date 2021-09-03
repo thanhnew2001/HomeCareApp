@@ -5,6 +5,8 @@ const [data, setData] = useState([]);
 const endPoint = "http://localhost:4001/doctors"
 const [name, setName] = useState('')
 const [age, setAge] = useState(0)
+const [phone, setPhone] = useState("")
+const [address, setAddress] = useState("")
 const [id, setId] = useState('')
 const [avatar, setAvatar] = useState('')
 const [uploadFile, setUploadFile] = useState();
@@ -21,18 +23,17 @@ const save = () => {
            headers: {
            'Content-Type': 'application/json'
            },
-           body: JSON.stringify({ name: name, age: age, avatar: avatar})
-       }).then(data => load())
+           body: JSON.stringify({ name: name, age: age, phone: phone, address: address, avatar: avatar})
+       }).then(data => search())
    }
    else{
-       console.log(avatar)
        fetch(endPoint, {
            method: 'PUT',
            headers: {
            'Content-Type': 'application/json'
            },
-           body: JSON.stringify({ id: id, name: name, age: age, avatar: avatar})
-       }).then(data => load())
+           body: JSON.stringify({ id: id, name: name, age: age, phone: phone, address: address, avatar: avatar})
+       }).then(data => search())
    }
  
    }
@@ -43,10 +44,10 @@ const deleteDoctor = (id) => {
        headers: {
          'Content-Type': 'application/json'
        }
-   }).then(data => load())
+   }).then(data => search())
 }
  
-const editDoctor = (id, name, age, avatar) => {
+const editDoctor = (id, name, age,  iphone, address , avatar) => {
    setId(id)
    setName(name)
    setAge(age)
@@ -87,6 +88,7 @@ function populatePageNo(size){
   const pageSize = document.querySelector("#pageSize").value
   const noPage = size/pageSize
   const pageNoSelect = document.querySelector("#pageNo")
+  const selectedPageNo = document.querySelector("#pageNo").value
   
   while (pageNoSelect.options.length > 1) {                
     pageNoSelect.remove(0);
@@ -97,7 +99,8 @@ function populatePageNo(size){
     opt.value = i;
     opt.innerHTML = i;
     pageNoSelect.appendChild(opt);
-}
+  }
+  pageNoSelect.value = selectedPageNo
 }
 
 const handleFileUpload = () => {
@@ -144,6 +147,18 @@ return (
       <label>Age:</label><input type="number" className="form-control" value={age} onChange={(e)=>setAge(e.target.value)}/> 
       </div>
 
+
+      <div class="form-group">
+      <label>Phone:</label><input type="text" className="form-control" value={phone} onChange={(e)=>setPhone(e.target.value)}/> 
+      </div>
+
+
+      <div class="form-group">
+      <label>Address:</label><input type="text" className="form-control" value={address} onChange={(e)=>setAddress(e.target.value)}/> 
+      </div>
+
+
+
       <div class="form-group">
       <label>Avatar:</label>
       <input type="file" onChange={()=>handleFileUpload()}/> {uploadMessage}
@@ -181,8 +196,12 @@ return (
       <tr>
         <th>Name</th>
         <th>Age</th>
-        <th>Avatar</th>
+       
+        <th>Phone</th>
+        <th>Address</th> 
+        <th>Avatar</th>  
         <th>Action</th>
+    
       </tr>
     </thead>
     <tbody>      
@@ -190,7 +209,9 @@ return (
         <tr>
             <td>{a.name}</td>
             <td>{a.age}</td>
-            <td><img style={{width:"50px"}} src={'http://localhost:4001/'+a.avatar}/></td>
+            <td>{a.phone}</td>
+            <td>{a.address}</td>
+            <td><img style={{width:"60px", height:"60px", "border-radius":"30px"}} src={'http://localhost:4001/'+a.avatar}/></td>
             <td><button className="btn btn-warning" onClick={()=> deleteDoctor(a._id)}>Delete</button>
             <button className="btn btn-warning" onClick={()=> editDoctor(a._id, a.name, a.age, a.avatar)}>Edit</button></td>
         </tr>

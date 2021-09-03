@@ -25,7 +25,7 @@ router.delete('/doctors/:id', function(req, res){
  
 router.put('/doctors', function(req, res){
     doctor.findOneAndUpdate({_id: req.body.id},
-    {name: req.body.name, age: parseInt(req.body.age), avatar: req.body.avatar}, 
+    {name: req.body.name, age: parseInt(req.body.age), avatar: req.body.avatar, phone: req.body.phone, address: req.body.address }, 
 
     function(err, result){
        res.send(result)

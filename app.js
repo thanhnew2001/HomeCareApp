@@ -12,8 +12,6 @@ app.use(express.json());
 app.use(cors())
 
 
-
-
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, '../jwt-project/client/build')));
 
@@ -22,12 +20,24 @@ const products = require("./router/productRouter.js")
 app.use('/', products)
 const f0s = require("./router/f0Router.js")
 app.use('/', f0s)
-const users = require("./router/userRouter.js")
-app.use('/', users)
+const userLogin = require("./router/userLoginRouter.js")
+app.use('/', userLogin)
+
 const doctors = require("./router/doctorRouter.js")
 app.use('/', doctors)
 const exams = require("./router/examRouter.js")
 app.use('/', exams)
+const volunteers = require("./router/volunteerRouter.js")
+app.use('/', volunteers)
+
+const users = require("./router/userRouter.js")
+app.use('/', users)
+
+const churchs = require("./router/churchRouter.js")
+app.use('/', churchs)
+
+const lectures = require("./router/lectureRouter.js")
+app.use('/', lectures)
 
 const uploads = require("./router/uploadRouter.js")
 app.use('/', uploads)

@@ -18,7 +18,7 @@ const save = () => {
            'Content-Type': 'application/json'
            },
            body: JSON.stringify({ name: name, price: price})
-       }).then(data => load())
+       }).then(data => search())
    }
    else{
        fetch(endPoint, {
@@ -27,7 +27,7 @@ const save = () => {
            'Content-Type': 'application/json'
            },
            body: JSON.stringify({ id: id, name: name, price: price})
-       }).then(data => load())
+       }).then(data => search())
    }
  
    }
@@ -38,7 +38,7 @@ const deleteProduct = (id) => {
        headers: {
          'Content-Type': 'application/json'
        }
-   }).then(data => load())
+   }).then(data => search())
 }
  
 const editProduct = (id, name, price) => {
@@ -128,7 +128,7 @@ return (
             Page Size 
               <select id="pageSize" onChange={()=>search()}>
               <option value="5">5</option>
-              <option value="10">10</option>
+              <option value="10">10</option>a=
               <option value="20">20</option>
               </select>
           </div>         

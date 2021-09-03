@@ -14,6 +14,10 @@ export default function Menu() {
                         <li><a href="/product">Product</a></li>
                         <li><a href="/f0">F0</a></li>
                         <li><a href="/doctor">Doctor</a></li>
+                        <li><a href="/volunteer">Volunteer</a></li>
+                        <li><a href="/user">User</a></li>
+                        <li><a href="/church">Church</a></li>
+                        <li><a href="/lecture">Lecture</a></li>
                         <li><a href="/about">About</a></li>
                     </ul>
                 </div>

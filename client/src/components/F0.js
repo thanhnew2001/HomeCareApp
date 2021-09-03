@@ -18,7 +18,7 @@ const save = () => {
            'Content-Type': 'application/json'
            },
            body: JSON.stringify({ name: name, age: age})
-       }).then(data => load())
+       }).then(data => search())
    }
    else{
        console.log(age)
@@ -28,7 +28,7 @@ const save = () => {
            'Content-Type': 'application/json'
            },
            body: JSON.stringify({ id: id, name: name, age: age})
-       }).then(data => load())
+       }).then(data => search())
    }
  
    }
@@ -39,7 +39,7 @@ const deleteF0 = (id) => {
        headers: {
          'Content-Type': 'application/json'
        }
-   }).then(data => load())
+   }).then(data => search())
 }
  
 const editF0 = (id, name, age) => {

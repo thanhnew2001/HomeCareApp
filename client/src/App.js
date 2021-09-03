@@ -11,6 +11,10 @@ import F0 from './components/F0';
 import Menu from './components/Menu';
 import Doctor from './components/Doctor';
 import Exam from "./components/Exam";
+import Volunteer from "./components/Volunteer";
+import User from "./components/User";
+import Church from "./components/Church";
+import Lecture from "./components/Lecture";
 
 
 function App() {
@@ -55,6 +59,25 @@ function App() {
             <Route path="/exam/:f0">
               <Exam/>
             </Route>  
+
+            <Route path="/volunteer">
+              <Volunteer />
+            </Route>
+
+            <Route path="/user">
+              <User />
+            </Route>
+
+
+            <Route path="/church">
+              <Church />
+            </Route>
+
+
+            <Route path="/lecture">
+              <Lecture/>
+            </Route>
+
 
           </Switch>
         </div>
