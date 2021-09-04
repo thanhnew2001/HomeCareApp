@@ -105,15 +105,15 @@ useEffect(() => {
  
 return (
   <div>
-      <h2>User Form</h2>
+      <h2>Quản lý người dùng</h2>
       <input type="hidden" className="form-control" value={id} onChange={(e)=>setId(e.target.value)}/>
 
       <div class="form-group">
-      <label>First_name:</label><input type="text" className="form-control" value={first_name} onChange={(e)=>setFirst_name(e.target.value)}/>
+      <label>Tên:</label><input type="text" className="form-control" value={first_name} onChange={(e)=>setFirst_name(e.target.value)}/>
       </div>
 
       <div class="form-group">
-      <label>:Last_name:</label><input type="text" className="form-control" value={last_name} onChange={(e)=>setLast_name(e.target.value)}/> 
+      <label>Họ:</label><input type="text" className="form-control" value={last_name} onChange={(e)=>setLast_name(e.target.value)}/> 
       </div>
 
 
@@ -123,7 +123,7 @@ return (
 
 
       <div class="form-group">
-      <label>Password,:</label><input type="text" className="form-control" value={password} onChange={(e)=>setPassword(e.target.value)}/> 
+      <label>Mật khẩu:</label><input type="text" className="form-control" value={password} onChange={(e)=>setPassword(e.target.value)}/> 
       </div>
 
       
@@ -133,7 +133,7 @@ return (
 
       <button class="btn btn-primary" onClick={()=> addnew()}>Add new</button>
 
-      <h2>User Table</h2>
+      <h2>Danh sách người dùng</h2>
 
         <div class="row">
           <div class="col-md-8">
@@ -141,7 +141,7 @@ return (
             <button onClick={()=>search()}>Search</button>
           </div>
           <div class="col-md-4">
-            Page Number: 
+            Số trang: 
             <select id="pageNo" onChange={()=>search()}>
               <option value="1">1</option>
             </select>
@@ -157,10 +157,10 @@ return (
        <table class="table table-striped">
        <thead>
       <tr>
-        <th>first_name</th>
-        <th>last_name</th>
+        <th>Tên</th>
+        <th>Họ</th>
         <th>email</th>
-        <th>password</th>
+        <th>Mật Khẩu</th>
         <th>Action</th>
       </tr>
     </thead>

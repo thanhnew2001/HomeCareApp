@@ -137,20 +137,20 @@ useEffect(() => {
  
 return (
   <div>
-      <h2>Volunteer Form</h2>
+      <h2>Quản lý tình nguyện viên</h2>
       <input type="hidden" className="form-control" value={id} onChange={(e)=>setId(e.target.value)}/>
 
       <div class="form-group">
-      <label>Name:</label><input type="text" className="form-control" value={name} onChange={(e)=>setName(e.target.value)}/>
+      <label>Tên:</label><input type="text" className="form-control" value={name} onChange={(e)=>setName(e.target.value)}/>
       </div>
 
       <div class="form-group">
-      <label>Age:</label><input type="number" className="form-control" value={age} onChange={(e)=>setAge(e.target.value)}/> 
+      <label>Tuổi:</label><input type="number" className="form-control" value={age} onChange={(e)=>setAge(e.target.value)}/> 
       </div>
 
 
       <div class="form-group">
-      <label>Phone:</label><input type="text" className="form-control" value={phone} onChange={(e)=>setPhone(e.target.value)}/> 
+      <label>Số điện thoại:</label><input type="text" className="form-control" value={phone} onChange={(e)=>setPhone(e.target.value)}/> 
       </div>
 
 
@@ -160,7 +160,7 @@ return (
 
 
       <div class="form-group">
-      <label>Address:</label><input type="text" className="form-control" value={address} onChange={(e)=>setAddress(e.target.value)}/> 
+      <label>Địa chỉ:</label><input type="text" className="form-control" value={address} onChange={(e)=>setAddress(e.target.value)}/> 
       </div>
 
 
@@ -176,7 +176,7 @@ return (
 
       <button class="btn btn-primary" onClick={()=> addnew()}>Add new</button>
 
-      <h2>Volunteer Table</h2>
+      <h2>Danh sách tình nguyện viên</h2>
 
         <div class="row">
           <div class="col-md-8">
@@ -184,7 +184,7 @@ return (
             <button onClick={()=>search()}>Search</button>
           </div>
           <div class="col-md-4">
-            Page Number: 
+            Số trang: 
             <select id="pageNo" onChange={()=>search()}>
               <option value="1">1</option>
             </select>
@@ -200,11 +200,11 @@ return (
        <table class="table table-striped">
        <thead>
       <tr>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Phone</th>
+        <th>Tên</th>
+        <th>Tuổi</th>
+        <th>Số điện thoại</th>
         <th>Email</th>
-        <th>Address</th> 
+        <th>Địa chỉ</th> 
         <th>Avatar</th>  
         <th>Action</th>
     

@@ -99,22 +99,22 @@ useEffect(() => {
  
 return (
   <div>
-      <h2>Church Form</h2>
+      <h2>Quản lý Nhà thờ</h2>
       <input type="hidden" className="form-control" value={id} onChange={(e)=>setId(e.target.value)}/>
 
       <div class="form-group">
-      <label>Name:</label><input type="text" className="form-control" value={name} onChange={(e)=>setName(e.target.value)}/>
+      <label>Tên:</label><input type="text" className="form-control" value={name} onChange={(e)=>setName(e.target.value)}/>
       </div>
 
       <div class="form-group">
-      <label>address:</label><input type="text" className="form-control" value={address} onChange={(e)=>setAddress(e.target.value)}/> 
+      <label>Địa chỉ:</label><input type="text" className="form-control" value={address} onChange={(e)=>setAddress(e.target.value)}/> 
       </div>
 
       <button class="btn btn-primary" onClick={()=> save()}>Save</button>
 
       <button class="btn btn-primary" onClick={()=> addnew()}>Add new</button>
 
-      <h2>Church Table</h2>
+      <h2>Danh sách nhà thờ</h2>
 
         <div class="row">
           <div class="col-md-8">
@@ -122,7 +122,7 @@ return (
             <button onClick={()=>search()}>Search</button>
           </div>
           <div class="col-md-4">
-            Page Number: 
+            Trang số: 
             <select id="pageNo" onChange={()=>search()}>
               <option value="1">1</option>
             </select>
@@ -138,8 +138,8 @@ return (
        <table class="table table-striped">
        <thead>
       <tr>
-        <th>Name</th>
-        <th>Address</th>
+        <th>Tên</th>
+        <th>Địa chỉ</th>
         <th>Action</th>
         <th>Details</th>
       </tr>

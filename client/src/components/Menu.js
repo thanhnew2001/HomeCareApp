@@ -10,14 +10,14 @@ export default function Menu() {
                         <a class="navbar-brand" href="#">PMS</a>
                     </div>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="/product">Product</a></li>
+                        <li class="active"><a href="/">Trang chủ</a></li>
+                        <li><a href="/product">Sản phảm</a></li>
                         <li><a href="/f0">F0</a></li>
-                        <li><a href="/doctor">Doctor</a></li>
-                        <li><a href="/volunteer">Volunteer</a></li>
-                        <li><a href="/user">User</a></li>
-                        <li><a href="/church">Church</a></li>
-                        <li><a href="/lecture">Lecture</a></li>
+                        <li><a href="/doctor">Bác sĩ</a></li>
+                        <li><a href="/volunteer">Tình nguyện viện</a></li>
+                        <li><a href="/user">Người dùng</a></li>
+                        <li><a href="/church">Nhà thờ</a></li>
+                        <li><a href="/lecture">Bài giảng</a></li>
                         <li><a href="/about">About</a></li>
                     </ul>
                 </div>

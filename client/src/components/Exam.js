@@ -115,7 +115,7 @@ useEffect(() => {
  
 return (
   <div>
-      <h2>Exam Form</h2>
+      <h2>Quản lý khám bệnh</h2>
 
       <div class="form-group">
       <label>F0 : {f0Info}</label>
@@ -125,7 +125,7 @@ return (
       <input type="hidden" className="form-control" value={id} onChange={(e)=>setId(e.target.value)}/>
 
       <div class="form-group">
-      <label>Temperature:</label><input type="number" min="36" max="42" className="form-control" value={temperature} onChange={(e)=>setTemperature(e.target.value)}/>
+      <label>Nhiệt độ:</label><input type="number" min="36" max="42" className="form-control" value={temperature} onChange={(e)=>setTemperature(e.target.value)}/>
       </div>
 
       <div class="form-group">
@@ -136,7 +136,7 @@ return (
 
       <button class="btn btn-primary" onClick={()=> addnew()}>Add new</button>
 
-      <h2>Exam Table</h2>
+      <h2>Danh sách khám bệnh</h2>
 
         {/* <div class="row">
           <div class="col-md-8">
@@ -160,7 +160,7 @@ return (
        <table class="table table-striped">
        <thead>
       <tr>
-        <th>Temperature</th>
+        <th>Nhiệt độ</th>
         <th>Spo2</th>
         <th>Action</th>
       </tr>

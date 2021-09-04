@@ -136,25 +136,25 @@ useEffect(() => {
  
 return (
   <div>
-      <h2>Doctor Form</h2>
+      <h2>Quản lý bác sĩ</h2>
       <input type="hidden" className="form-control" value={id} onChange={(e)=>setId(e.target.value)}/>
 
       <div class="form-group">
-      <label>Name:</label><input type="text" className="form-control" value={name} onChange={(e)=>setName(e.target.value)}/>
+      <label>Tên:</label><input type="text" className="form-control" value={name} onChange={(e)=>setName(e.target.value)}/>
       </div>
 
       <div class="form-group">
-      <label>Age:</label><input type="number" className="form-control" value={age} onChange={(e)=>setAge(e.target.value)}/> 
-      </div>
-
-
-      <div class="form-group">
-      <label>Phone:</label><input type="text" className="form-control" value={phone} onChange={(e)=>setPhone(e.target.value)}/> 
+      <label>Tuổi:</label><input type="number" className="form-control" value={age} onChange={(e)=>setAge(e.target.value)}/> 
       </div>
 
 
       <div class="form-group">
-      <label>Address:</label><input type="text" className="form-control" value={address} onChange={(e)=>setAddress(e.target.value)}/> 
+      <label>Số điện thoại:</label><input type="text" className="form-control" value={phone} onChange={(e)=>setPhone(e.target.value)}/> 
+      </div>
+
+
+      <div class="form-group">
+      <label>Địa chỉ:</label><input type="text" className="form-control" value={address} onChange={(e)=>setAddress(e.target.value)}/> 
       </div>
 
 
@@ -170,7 +170,7 @@ return (
 
       <button class="btn btn-primary" onClick={()=> addnew()}>Add new</button>
 
-      <h2>Doctor Table</h2>
+      <h2>Danh sách bác sĩ</h2>
 
         <div class="row">
           <div class="col-md-8">
@@ -178,7 +178,7 @@ return (
             <button onClick={()=>search()}>Search</button>
           </div>
           <div class="col-md-4">
-            Page Number: 
+            Số trang: 
             <select id="pageNo" onChange={()=>search()}>
               <option value="1">1</option>
             </select>
@@ -194,11 +194,11 @@ return (
        <table class="table table-striped">
        <thead>
       <tr>
-        <th>Name</th>
-        <th>Age</th>
+        <th>Tên</th>
+        <th>Tuổi</th>
        
-        <th>Phone</th>
-        <th>Address</th> 
+        <th>Số điện thoại</th>
+        <th>Địa chỉ</th> 
         <th>Avatar</th>  
         <th>Action</th>
     

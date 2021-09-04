@@ -140,25 +140,25 @@ useEffect(() => {
  
 return (
   <div>
-      <h2>Lecture Form</h2>
+      <h2>Quản lý bài giảng</h2>
       <input type="hidden" className="form-control" value={id} onChange={(e)=>setId(e.target.value)}/>
 
       <div class="form-group">
-      <label>Name:</label><input type="text" className="form-control" value={name} onChange={(e)=>setName(e.target.value)}/>
+      <label>Tên bài giảng</label><input type="text" className="form-control" value={name} onChange={(e)=>setName(e.target.value)}/>
       </div>
 
       <div class="form-group">
-      <label>Teacher:</label><input type="text" className="form-control" value={teacher} onChange={(e)=>setTeacher(e.target.value)}/> 
-      </div>
-
-
-      <div class="form-group">
-      <label>Video link:</label><input type="text" className="form-control" value={video} onChange={(e)=>setVideo(e.target.value)}/> 
+      <label>Người giảng:</label><input type="text" className="form-control" value={teacher} onChange={(e)=>setTeacher(e.target.value)}/> 
       </div>
 
 
       <div class="form-group">
-      <label>Date:</label><input type="datetime-local" className="form-control" value={date} onChange={(e)=>setDate(e.target.value)}/> 
+      <label>Đường link:</label><input type="text" className="form-control" value={video} onChange={(e)=>setVideo(e.target.value)}/> 
+      </div>
+
+
+      <div class="form-group">
+      <label>Ngày:</label><input type="datetime-local" className="form-control" value={date} onChange={(e)=>setDate(e.target.value)}/> 
       </div>
 
 
@@ -175,7 +175,7 @@ return (
 
       <button class="btn btn-primary" onClick={()=> addnew()}>Add new</button>
 
-      <h2>Lecture Table</h2>
+      <h2>Danh sách bai giảng</h2>
 
         <div class="row">
           <div class="col-md-8">
@@ -183,7 +183,7 @@ return (
             <button onClick={()=>search()}>Search</button>
           </div>
           <div class="col-md-4">
-            Page Number: 
+           Trang số 
             <select id="pageNo" onChange={()=>search()}>
               <option value="1">1</option>
             </select>
@@ -199,11 +199,12 @@ return (
        <table class="table table-striped">
        <thead>
       <tr>
-        <th>Name</th>
-        <th>Teacher</th>
-        <th>Slides</th>
-        <th>Date</th> 
+        <th>Tên bài giảng</th>
+        <th>Người giảng</th>
         <th>Video</th>  
+        <th>Ngày</th> 
+        <th>Slides</th>
+       
        
     
       </tr>
